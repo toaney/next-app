@@ -1,11 +1,22 @@
 'use client';
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 
 const page = () => {
-  let [percentage, setPercentage] = React.useState(0)
+  let [percentage, setPercentage] = React.useState(100)
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPercentage(percentage--)
+      console.log(percentage)
+      if (percentage < 0) {
+        clearInterval(interval);
+      }
+    }, 5)
+  }, [])
 
   const fillBar = (seconds) => {
     // const bar = document.querySelector('bar');
@@ -19,7 +30,7 @@ const page = () => {
       if (percentage > 100) {
         clearInterval(interval);
       }
-    }, (seconds * 1000)/100)
+    }, (seconds)/100)
 
   }
 
