@@ -1,13 +1,12 @@
 'use client'
 
-import React, {useReducer, useState} from 'react'
-import Todo from './todo'
+import React, {useReducer, useState, createContext} from 'react'
+import Child from './child1';
 
-const ACTIONS = {
+export const ACTIONS = {
   INCREMENT: 'increment', 
   DECREMENT: 'decrement'
 }
-
 
 function reducer(state, action) {
   switch ( action.type ) {
@@ -20,15 +19,12 @@ function reducer(state, action) {
   }
 };
 
+export const CountContext = createContext(0);
+
 const page = (() => {
   const [state, dispatch] = useReducer(reducer, {count: 0});
-  // const [input, setInput] = useState('')
   const [count, setCount] = useState(0);
 
-
-  // function handleSubmit(e){
-  //   e.prevent.default
-  // };
 
   function increment(){
     // setCount(count + 1);
@@ -47,20 +43,11 @@ const page = (() => {
       <button onClick={decrement}>-</button>
       <span> &nbsp;{state.count} &nbsp;</span>
       <button onClick={increment}>+</button>
-
-
-
-
-
-
-
-      {/* <form onSubmit={handleSubmit}>
-        <input type="text" value={input} onChange={e => setInput(e.target.value)} />
-      </form> */}
-      {/* <Todo /> */}
-      {/* {todos.map(todo => {
-
-      })} */}
+      <br />
+      <br />
+      <CountContext.Provider value={state} >
+        <Child dispatch={dispatch}/>
+      </CountContext.Provider>
     </>
   )
 })
