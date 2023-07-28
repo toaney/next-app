@@ -9,5 +9,3 @@ export default function Todo() {
     </>
   )
 }
-
-// export default Todo;
