@@ -11,6 +11,10 @@ const Carousel = (({itemList}) => {
       console.log(activeIndex)
       updateIndex(activeIndex +1 >= itemList.length ? 0 : activeIndex + 1)
     }, 3000)
+
+    return () => {
+      clearTimeout(timeout);
+    };
   },[activeIndex])
 
   function updateIndex(newIndex){
@@ -38,7 +42,7 @@ const Carousel = (({itemList}) => {
       <div className="carousel-buttons">
         <button onClick={() => updateIndex(activeIndex - 1)}>Prev</button>
         {itemList.map((item, index) => {
-          return <button onClick={() => updateIndex(index)}>.</button>
+          return <button onClick={() => updateIndex(index)} key={index}>.</button>
         })}
         <button onClick={() => updateIndex(activeIndex + 1)}>next</button>
         <div>{activeIndex}</div>

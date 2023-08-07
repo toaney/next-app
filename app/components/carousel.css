@@ -11,6 +11,7 @@
 
 .carousel-inner{
   white-space: nowrap;
+  transition: transform 0.3s;
 }
 
 .carousel-item{
