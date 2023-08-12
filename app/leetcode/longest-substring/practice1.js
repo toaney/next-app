@@ -38,6 +38,7 @@ export default function Practice1() {
     }
 
     console.log(max)
+    console.log('longestSub: ', max, ', index: ', windowStart);
     return max 
   }
 
