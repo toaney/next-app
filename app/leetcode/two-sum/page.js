@@ -1,29 +1,11 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function(nums, target) {
-  const lowNums = [];
-  const output = [];
+'use client'
+import Practice2 from './Practice2';
 
-  for (i = 0; i < nums.length; i++){
-      let current = nums[i];
-          if (lowNums.length){
-              for (j = 0; j < lowNums.length; j++){
-                  if (target - lowNums[j].number === current){
-                      return [lowNums[j].index, i]
-                      
-                  }
-              }
-          }
-          lowNums.push({number: current, index: i})
-  }
-
-  const dictionary = [];
-
-  return ( nums.map( (item) => {
-      
-  }))
-
-};
+export default function page(){
+  return (
+    <>
+      <h2>Two Sum</h2>
+      <Practice2 />
+    </>
+  )
+}
