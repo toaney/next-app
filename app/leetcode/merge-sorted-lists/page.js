@@ -1,9 +1,9 @@
 'use client';
 
 import Practice1 from './Practice1';
+import Practice2 from './Practice2';
 
 export default function page(){
-  console.log("Linked List Practice 1")
 
   class Node{
     constructor(element){
@@ -189,7 +189,8 @@ export default function page(){
   return(
     <>
       <h2>Merge two sorted lists</h2>
-      <Practice1 list1={list1} list2={list2} Node={Node} />
+      {/* <Practice1 list1={list1} list2={list2} Node={Node} /> */}
+      <Practice2 list1={list1} list2={list2} Node={Node} />
     </>
   )
 }
