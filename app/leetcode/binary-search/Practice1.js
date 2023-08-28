@@ -10,7 +10,7 @@ export default function Practice1(){
     let right = array[array.length - 1];
     let mid;
 
-    while (left !== right) {
+    while (left <= right) {
       let mid = Math.floor((left + right) / 2)
 
       if (array[mid] === target){
@@ -18,14 +18,15 @@ export default function Practice1(){
       };
 
       if (target < array[mid]){
-        right = mid;
+        right = mid - 1;
         mid = Math.floor((mid / 2) - 1) 
       } else {
-        left = mid;
+        left = mid + 1;
         mid = mid + Math.floor((right - mid) / 2)
       }
 
     }
+
 
   }
 
