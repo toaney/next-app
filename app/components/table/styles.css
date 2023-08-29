@@ -1,0 +1,11 @@
+
+.table-component {
+  border: 1px solid #666;
+  padding: 3px 5px;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #666;
+  padding: 3px 5px;
+}
