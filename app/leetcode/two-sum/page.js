@@ -1,5 +1,5 @@
 'use client'
-import Practice2 from './Practice2';
+import Practice3 from './Practice3';
 
 export default function page(){
   // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -10,7 +10,7 @@ export default function page(){
   return (
     <>
       <h2>Two Sum</h2>
-      <Practice2 />
+      <Practice3 />
     </>
   )
 }
