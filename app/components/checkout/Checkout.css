@@ -1,0 +1,8 @@
+.checkout{
+  background-color: #fafafa;
+}
+
+.checkout-line{
+  border-bottom: 1px solid var(--darken-2);
+  padding: 5px;
+}

@@ -7,7 +7,7 @@ const Practice4 = () => {
   const validateParens = (s) => {
     let stack = []
 
-    let validParens = ' () {} []';
+    let validParens = '() {} []';
 
     // main loop
     for (let i = 0; i < s.length; i++) {

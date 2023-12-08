@@ -48,3 +48,8 @@ const Practice3 = () => {
 }
 
 export default Practice3;
+
+// time is O(n)
+// space is O(n)
+
+

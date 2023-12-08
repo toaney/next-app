@@ -1,0 +1,156 @@
+main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh;
+  background-color: white;
+}
+
+:root {
+  --primary-color: #3a9691;
+  --primary-color-dark: #317f7b;
+  --text-color-light-1: white;
+  --light-2: #f4f4f4;
+  --padding-small: 25px;
+  --padding-xsmall: 10px;
+  --darken-1: rgba(0,0,0,.01);
+  --darken-2: rgba(0,0,0,.1);
+}
+
+input[type="text"]{
+  padding: var(--padding-xsmall);
+}
+
+button{
+  background-color: var(--primary-color);
+  color: var(--text-color-light-1);
+  border: none;
+  border-radius: 2px;
+  padding: var(--padding-xsmall);
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--primary-color);
+  background-color: var(--primary-color-dark);
+}
+
+html {
+  font-family: "Helvetica";
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  margin: 0px;
+}
+
+h3{
+  margin-bottom: var(--padding-xsmall);
+}
+
+.purchase-page{
+  display: grid;
+  grid-template-areas: "nav nav nav"
+    "products products cart";
+  max-width: 700px; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 66px 1fr;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0px auto;
+  max-height: 400px;
+  box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  grid-area: cart;
+  justify-content: space-between;
+  padding: var(--padding-small);
+  border: 1px solid #eaeaea;
+}
+
+.checkout .line-items{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.checkout .coupon-code{
+  margin-bottom: 10px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  grid-area: products;
+  padding: var(--padding-small);
+}
+
+.product-count{
+  width: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--padding-xsmall);
+  padding-bottom: var(--padding-xsmall);
+  padding: var(--padding-xsmall);
+  justify-items: center;
+  align-items: center;
+}
+
+.product-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-icon{
+  margin-right: 8px;
+}
+
+.totals{
+  display: flex;
+  flex-direction: column;
+}
+
+.subtotal, .tax, .total{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.subtotal-title, .tax-title, .total-title{
+  font-weight: bold;
+}
+
+.nav-bar {
+  color: var(--primary-color);
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 24px;
+  justify-content: center;
+  display: flex;
+  background-image: url(https://x.yummlystatic.com/web/yummly.svg);
+  width: 250px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
